@@ -3,7 +3,7 @@ import { xai } from '@ai-sdk/xai';
 import { generateText } from 'ai';
 import { fileURLToPath } from 'url';
 
-const defaultImageUrl = 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/821844/cleaned_3316221.jpg';
+const defaultImageUrl = 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/815884/cleaned_3333453.jpg';
 const __filename = fileURLToPath(import.meta.url);
 
 /**
@@ -37,6 +37,11 @@ export const DEFAULT_REFERENCE_EXAMPLES = [
     label: '2',
     imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/821844/cleaned_3316221.jpg',
     note: 'Classic/old-style 3D',
+  },
+  {
+    label: '1',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/927972/cleaned_3296049.jpg',
+    note: 'New ultra-realistic photogrammetry 3D',
   },
 ];
 
