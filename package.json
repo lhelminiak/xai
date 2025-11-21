@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "@ai-sdk/xai": "^2.0.34",
-    "ai": "^5.0.98"
+    "ai": "^5.0.98",
+    "dotenv": "^16.4.5"
   }
 }

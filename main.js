@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { xai } from '@ai-sdk/xai';
 import { generateText } from 'ai';
 import { fileURLToPath } from 'url';
@@ -14,30 +15,22 @@ const __filename = fileURLToPath(import.meta.url);
 
 /**
  * Default labeled reference examples used for few-shot classification.
- * Fill this array with real examples from your datasets.
- *
- * Each item should look like:
- * {
- *   label: '1', // or '2' or '3'
- *   imageUrl: 'https://your-bucket/cleaned_123.jpg',
- *   note: 'Downtown with very photorealistic building sides and trees'
- * }
+ * Filled with real examples from your 3D and 2D datasets.
  */
 export const DEFAULT_REFERENCE_EXAMPLES = [
-  // Example template – replace with real URLs from your 2D / 3D datasets:
   {
     label: '1',
-    imageUrl: 'https://your-bucket/3d_photogrammetry_example.jpg',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/928739/cleaned_3294180.jpg',
     note: 'New ultra-realistic photogrammetry 3D',
   },
   {
     label: '2',
-    imageUrl: 'https://your-bucket/classic_3d_example.jpg',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/928733/cleaned_3294240.jpg',
     note: 'Classic extruded 3D buildings with flat/gray sides',
   },
   {
     label: '3',
-    imageUrl: 'https://your-bucket/2d_flat_example.jpg',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/822910/cleaned_3296360.jpg',
     note: 'Pure 2D satellite / flat top-down view',
   },
 ];
@@ -141,15 +134,9 @@ Be extremely strict: only call it #1 if it genuinely has full photogrammetry tex
   return result;
 }
 
-
-
-
-
-
-
 if (process.argv[1] === __filename) {
   const [, , cliImageUrl] = process.argv;
   const targetImageUrl = cliImageUrl ?? defaultImageUrl;
-  const result = await analyzeGoogleEarthScreenshot(targetImageUrl);
+  const result = await analyzeGoogleEarthScreenshot(targetImageUrl, DEFAULT_REFERENCE_EXAMPLES);
   console.log(result.text);
 }
