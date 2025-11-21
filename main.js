@@ -43,6 +43,21 @@ export const DEFAULT_REFERENCE_EXAMPLES = [
     imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/927972/cleaned_3296049.jpg',
     note: 'New ultra-realistic photogrammetry 3D',
   },
+  {
+    label: '2',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/822139/cleaned_3313871.jpg',
+    note: 'Classic/old-style 3D',
+  },
+  {
+    label: '2',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/822041/cleaned_3314665.jpg',
+    note: 'Classic/old-style 3D',
+  },
+  {
+    label: '2',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/815965/cleaned_3331701.jpg',
+    note: 'Classic/old-style 3D',
+  },
 ];
 
 /**
