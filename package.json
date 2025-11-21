@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "xai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@ai-sdk/xai": "^2.0.34",
+    "ai": "^5.0.98"
+  }
+}
