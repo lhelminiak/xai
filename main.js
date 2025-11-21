@@ -24,14 +24,19 @@ export const DEFAULT_REFERENCE_EXAMPLES = [
     note: 'New ultra-realistic photogrammetry 3D',
   },
   {
-    label: '2',
+    label: '1',
     imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/928733/cleaned_3294240.jpg',
-    note: 'Classic extruded 3D buildings with flat/gray sides',
+    note: 'New ultra-realistic photogrammetry 3D',
   },
   {
-    label: '3',
+    label: '2',
     imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/822910/cleaned_3296360.jpg',
-    note: 'Pure 2D satellite / flat top-down view',
+    note: 'Classic/old-style 3D',
+  },
+  {
+    label: '2',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/821844/cleaned_3316221.jpg',
+    note: 'Classic/old-style 3D',
   },
 ];
 
