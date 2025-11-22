@@ -29,6 +29,26 @@ export const DEFAULT_REFERENCE_EXAMPLES = [
     note: 'New ultra-realistic photogrammetry 3D',
   },
   {
+    label: '1',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/927972/cleaned_3296049.jpg',
+    note: 'New ultra-realistic photogrammetry 3D',
+  },
+  {
+    label: '1',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/822178/cleaned_3327489.jpg',
+    note: 'New ultra-realistic photogrammetry 3D',
+  },
+  {
+    label: '1',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/951581/cleaned_3339817.jpg',
+    note: 'New ultra-realistic photogrammetry 3D',
+  },
+  {
+    label: '1',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/952020/cleaned_3339469.jpg',
+    note: 'New ultra-realistic photogrammetry 3D',
+  },
+  {
     label: '2',
     imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/822910/cleaned_3296360.jpg',
     note: 'Classic/old-style 3D',
@@ -37,11 +57,6 @@ export const DEFAULT_REFERENCE_EXAMPLES = [
     label: '2',
     imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/821844/cleaned_3316221.jpg',
     note: 'Classic/old-style 3D',
-  },
-  {
-    label: '1',
-    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/927972/cleaned_3296049.jpg',
-    note: 'New ultra-realistic photogrammetry 3D',
   },
   {
     label: '2',
