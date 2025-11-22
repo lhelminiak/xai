@@ -73,6 +73,16 @@ export const DEFAULT_REFERENCE_EXAMPLES = [
     imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/815965/cleaned_3331701.jpg',
     note: 'Classic/old-style 3D',
   },
+  {
+    label: '1',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/928035/cleaned_3311295.jpg',
+    note: 'New ultra-realistic photogrammetry 3D',
+  },
+  {
+    label: '1',
+    imageUrl: 'https://industrialiq.s3.us-east-1.amazonaws.com/property_satellite_images/928162/cleaned_3295791.jpg',
+    note: 'New ultra-realistic photogrammetry 3D',
+  },
 ];
 
 /**
@@ -115,7 +125,11 @@ You must assign the final screenshot to **exactly one** of these three categorie
 
 For your **final answer**, respond with the number (1, 2, or 3) on the first line, followed by your detailed reasoning explaining why it matches that category, with specific visual evidence from the image (refer to particular buildings, cars, trees, roof edges, shadows, texture quality, perspective, etc.).
 
-Be extremely strict: only call it #1 if it genuinely has full photogrammetry textures on roofs AND sides with no visible extrusion artifacts or flat gray sides. Do not say "kinda new" or "in between" — it must be clearly one of the three.`;
+When deciding between 1 and 2, use these rules:
+- Use 1 when the scene looks like the modern photorealistic "mesh" view: most visible buildings, ground surfaces, cars, and vegetation look like real aerial photos draped over 3D geometry, even if a few buildings still have simpler or fairly plain sides.
+- Use 2 only when the overall scene still has the older look: obviously extruded blocky buildings with mostly plain/auto-colored sides, billboard-like trees, and very simple/low-detail cars and vegetation.
+
+Do not say "kinda new" or "in between" — you must pick exactly one of the three categories.`;
 
     transitionText = 'Now classify the following new Google Earth / Google Maps screenshot. Respond with the number (1, 2, or 3) on the first line, then explain your reasoning with specific visual evidence.';
 
@@ -140,7 +154,11 @@ You must assign the final screenshot to **exactly one** of these three categorie
 
 For your **final answer**, respond with only the number (1, 2, or 3).
 
-Be extremely strict: only call it #1 if it genuinely has full photogrammetry textures on roofs AND sides with no visible extrusion artifacts or flat gray sides. Do not say "kinda new" or "in between" — it must be clearly one of the three. Never add extra text or commentary of any kind, only the number.`;
+When deciding between 1 and 2, use these rules:
+- Use 1 when the scene looks like the modern photorealistic "mesh" view: most visible buildings, ground surfaces, cars, and vegetation look like real aerial photos draped over 3D geometry, even if a few buildings still have simpler or fairly plain sides.
+- Use 2 only when the overall scene still has the older look: obviously extruded blocky buildings with mostly plain/auto-colored sides, billboard-like trees, and very simple/low-detail cars and vegetation.
+
+Never add extra text or commentary of any kind, only the number. You must still choose exactly one of the three categories (no "in between").`;
 
     transitionText = 'Now classify the following new Google Earth / Google Maps screenshot. Respond with only the number (1, 2, or 3).';
 
