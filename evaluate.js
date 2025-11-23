@@ -26,6 +26,7 @@ const DATASETS = [
 
 const CONFIG = Object.freeze({
   maxImages: parseImageLimit(process.argv.slice(2)),
+  withReasoning: parseReasoningFlag(process.argv.slice(2)),
 });
 
 function parsePrediction(text) {
@@ -66,6 +67,7 @@ async function evaluateDataset(dataset, maxImages = Infinity) {
       const response = await analyzeGoogleEarthScreenshot(
         imageUrl,
         DEFAULT_REFERENCE_EXAMPLES,
+        CONFIG.withReasoning,
       );
       text = response?.text ?? '';
       prediction = parsePrediction(text);
@@ -81,6 +83,7 @@ async function evaluateDataset(dataset, maxImages = Infinity) {
       prediction,
       isCorrect,
       error,
+      text, // Store full text for logging
     });
 
     if (error) {
@@ -141,6 +144,9 @@ function summarize(results) {
       console.log(
         `- ${failure.dataset}/${failure.fileName}: predicted ${failure.prediction ?? 'N/A'}${errorMsg}`
       );
+      if (CONFIG.withReasoning && failure.text) {
+        console.log(`  Reasoning: ${failure.text}`);
+      }
     });
     if (failures.length > MAX_FAILURES_TO_SHOW) {
       console.log(`...and ${failures.length - MAX_FAILURES_TO_SHOW} more`);
@@ -220,6 +226,18 @@ function extractLimitFromArgs(argv) {
   }
 
   return null;
+}
+
+function parseReasoningFlag(argv) {
+  for (let i = 0; i < argv.length; i += 1) {
+    const arg = argv[i];
+
+    if (arg === '--reasoning') {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 async function loadUrlsFromCsv(csvRelativePath) {
